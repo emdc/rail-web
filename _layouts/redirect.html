@@ -16,7 +16,7 @@
       const code = window.navigator.language || window.navigator.userLanguage || defaultLanguage;
       let language = languages[code] || defaultLanguage;
 
-      document.location = "/" + language + '{{ page.url }}' + document.location.hash;
+      document.location = "/" + language + '{{ page.url }}';
     </script>
     <noscript>
       <meta http-equiv="refresh" content="0; url=/en">
