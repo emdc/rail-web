@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Rust Programming Language</title>
+    <script type="text/javascript">
+      const languages = {
+        'en': 'en',
+        'en-US': 'en',
+        'fr': 'fr',
+        'fr-FR': 'fr',
+        'ru': 'ru',
+        'ru-RU': 'ru'
+      };
+      const defaultLanguage = 'en';
+      const code = window.navigator.language || window.navigator.userLanguage || defaultLanguage;
+      let language = languages[code] || defaultLanguage;
+
+      document.location = "/" + language + '{{ page.url }}' + document.location.hash;
+    </script>
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=/en{{ page.url }}">
+    </noscript>
+  </head>
+
+  <body>
+  <p><a href="/en{{ page.url }}">Click here</a> to be redirected.</p>
+  </body>
+</html>

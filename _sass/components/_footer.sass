@@ -1,0 +1,39 @@
+@import ../data/data
+
+footer
+  display: flex
+  width: 100%
+  margin-top: 90px
+  padding-top: 20px
+  padding-bottom: 20px
+  background-color: $colorFooter
+
+.footer-row
+  display: flex
+  flex-direction: row
+  margin-top: 15px
+  color: $colorSecondary
+
+  &.center
+    justify-content: center
+
+a.footer-link
+  color: $colorSecondary
+  text-decoration: underline
+  padding-left: 3px
+  padding-right: 3px
+
+  &::after
+    content: ','
+  &:last-child
+    &::after
+      content: ''
+
+  &:hover
+    color: $colorText
+
+  &.active
+    color: $colorLinkActive
+
+.footer-languages, .footer-languages-label
+  display: flex

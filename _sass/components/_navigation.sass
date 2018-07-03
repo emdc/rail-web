@@ -1,0 +1,30 @@
+@import ../data/data
+
+.nav-wrap
+  display: flex
+  flex-direction: row
+  justify-content: flex-end
+
+  .nav-link-item
+    display: inline-block
+    padding-left: 15px
+    font-size: $fsL
+    font-weight: 300
+
+    &.active
+      color: $colorLinkActive
+      font-weight: 700
+
+    &:first-child
+      padding-left: 0
+
+    .nav-link
+      text-decoration: none
+      color: $colorText
+
+      &.active
+        color: $colorLinkActive
+        font-weight: 700
+
+      &:hover
+        text-decoration: underline

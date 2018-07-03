@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    {% include meta.html %}
+
+    <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+  </head>
+
+  <body>
+    <nav>
+      {% for entry in site.data.ru.navigation %}
+        {% capture fullurl %}{{ site.baseurl }}{{ entry.url }}{% endcapture %}
+        {% if fullurl == page.url %}
+          {% assign current_page = fullurl %}
+          {% break %}
+        {% elsif page.url contains fullurl %}
+          {% assign current_page = fullurl %}
+        {% endif %}
+      {% endfor %}
+      <div class="container">
+        <ul class="nav-wrap">
+          {% for entry in site.data.ru.navigation %}
+            {% if entry.url == current_page %}
+              {% assign current = 'active' %}
+            {% else %}
+              {% assign current = null %}
+            {% endif %}
+            {% assign sublinks = entry.sublinks %}
+            {% if sublinks %}
+              <li class="nav-link-item {{ current }}">
+                <a class="nav-link {{ current }}" href="{{ site.baseurl }}{{ entry.url }}">{{ entry.title }}</a>
+                <ul>
+                  {% for sublink in sublinks %}
+                  <li><a class="nav-link {{ current }}" href="{{ site.baseurl }}{{ sublink.url }}">{{ sublink.title }}</a></li>
+                  {% endfor %}
+                </ul>
+              </li>
+            {% else %}
+              <li class="nav-link-item">
+                <a class="nav-link {{ current }}" href="{{ site.baseurl }}{{ entry.url }}">{{ entry.title }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container" role="main">
+      {{content}}
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="footer-row center">
+          <div class="footer-languages-label">Другие доступные языки: </div>
+          <div class="footer-languages">
+            {% for entry in site.data.languages %}
+              {% if fullurl contains entry.url %}
+                {% assign active_lang = 'active' %}
+              {% else %}
+                {% assign active_lang = null %}
+              {% endif %}
+              <a class="footer-link {{active_lang}}" href="{{ entry.url }}">{{ entry.name }}</a>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="footer-row center">
+          <a class="footer-link" href="https://rail-lang.org">rail-lang.org</a> by Richard Elert, 2018
+        </div>
+      </div>
+    </footer>
+
+    {% include analytics.html %}
+  </body>
+</html>

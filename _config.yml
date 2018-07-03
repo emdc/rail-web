@@ -1,0 +1,24 @@
+name: Richard Elert
+title: Rail
+email: i@emdc.ru
+description: Fast system programming language with extensive compile-time computation capabilities
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://rail-lang.org/" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: ""
+github_username:  ""
+
+sass:
+  sass_dir: _sass
+  style: :compressed
+
+markdown: kramdown
+relative_permalinks: false
+include: ['_pages']
+
+exclude:
+  - .idea
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME

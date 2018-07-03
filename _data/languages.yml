@@ -1,0 +1,8 @@
+- name: Русский
+  url: /ru
+
+- name: English
+  url: /en
+
+- name: Français
+  url: /fr
