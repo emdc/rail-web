@@ -3,31 +3,31 @@ layout: en/page
 permalink: /en
 ---
 
-> ## **Внимание!**
-> ### Это черовик языка. Проектирование еще в процессе, поэтому информация может сильно изменяться со временем.
-> ### Если у Вас есть предложения или замечания, просьба <a href="mailto:proposals@rail-lang.org">сообщить о них</a> :)
+> ## **Warning!**
+> ### This is a draft documentation. The design is still ongoing, so information can vary greatly over time.
+> ### If you have any suggestions or comments, please, <a href="mailto:proposals@rail-lang.org">report them</a> :)
 
-**Rail** — быстрый язык системного программирования с широкими возможностями вычисления времени компиляции. К проектированию подтолкнула ситуация со многими проблемами языка Си для разработки встраиваемых систем, а так же чрезмерная сложность языка С++. Целю разработки является выразительный язык, который позволит за как можно меньшее время создавать программное обеспечение любой сложности, не только системное.
+**Rail** — fast system programming language with extensive compile-time computation capabilities. Design has started after understanding many problems of C language for the development of embedded systems, as well as the excessive complexity of the C ++ language. The goal of the development — expressive language that will allow to create software of any complexity, not just system software.
 
-Основные тезисы, которые используются при проектировании:
-* Синтаксис ориентированный на чтение и простоту понимания кода.
-* Модульность и нулевая стоимость абстракций.
-* Строгая типизация с возможностью автоматического вывода типов.
-* Максимум вычислений во время компиляции, в т.ч. через специальные директивы.
-* Минимизация неопределенного поведения.
-* Мултипарадигменность:
-  * процедурное программирование;
-  * объектно-ориентированное программирование;
-  * функциональное программирование;
-  * обобщенное программирование;
-  * метапрограммирование.
-* Эффективные и безопасные инструменты для работы с памятью напрямую.
-* Учет небогатых возможностей микроконтроллеров и работы без какой-либо ОС.
+The main theses that are used in the design:
+* The syntax is read-oriented and easy to understand code.
+* Modularity and zero-cost abstractions.
+* Strict typing with the ability to automatically types calculations.
+* Maximize computations at compile time.
+* Minimize undefined behaviours.
+* Multiparadigms:
+  * procedural;
+  * object-oriented;
+  * functional;
+  * generic;
+  * metaprogramming.
+* Efficiency and safety tools for working with memory directly.
+* Accounting for the weak capabilities of microcontrollers and work without any OS (bare-metal).
 
-При разработке учитывается опыт таких языков:
-* C — простой синтаксис и удобство работы в условиях bare-metal.
-* C++ — ООП, возможности шаблонов.
-* Rust — статический анализатор кода, упор на безопасность операций.
-* JavaScript — выразительность и простота, скорость достижения результата.
-* C♯ — ООП, смысловая нагруженность и богатая стандартная библиотека.
-* Haskell — ФП, выразительность, возможности к оптимизации.
+The development takes into account the experience of such languages:
+* C — simple syntax and ease to use bare-metal.
+* C++ — object-oriented, template features.
+* Rust — static code analyzer, emphasis on security operations.
+* JavaScript — expressiveness and simplicity, the speed of achieving results.
+* C♯ — object-oriented, semantic load and rich standard library.
+* Haskell — functional, expressiveness, optimization.
