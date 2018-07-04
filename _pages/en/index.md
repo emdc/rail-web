@@ -1,6 +1,6 @@
 ---
 layout: en/page
-permalink: /en
+permalink: /en/
 ---
 
 > ## **Warning!**

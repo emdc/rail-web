@@ -1,7 +1,7 @@
 ---
 title: Rail Documentation
 layout: en/page
-permalink: /en/doc
+permalink: /en/doc/
 ---
 
 > ## **Warning!**

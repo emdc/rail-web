@@ -16,14 +16,14 @@
       const code = window.navigator.language || window.navigator.userLanguage || defaultLanguage;
       let language = languages[code] || defaultLanguage;
 
-      document.location = "/" + language;
+      document.location = '/' + language + '/';
     </script>
     <noscript>
-      <meta http-equiv="refresh" content="0; url=/en">
+      <meta http-equiv="refresh" content="0; url=/en/">
     </noscript>
   </head>
 
   <body>
-  <p><a href="/en">Click here</a> to be redirected.</p>
+  <p><a href="/en/">Click here</a> to be redirected.</p>
   </body>
 </html>

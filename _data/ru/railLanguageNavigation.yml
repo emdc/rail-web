@@ -1,0 +1,16 @@
+- title: Введение
+  url: /ru/doc/language/
+
+- title: Основы
+  sublinks:
+    - title: Комментарии
+      url: /ru/doc/language/comments/
+
+    - title: Типы и именование
+      url: /ru/doc/language/types/
+
+    - title: Переменные и константы
+      url: /ru/doc/language/variables/
+
+    - title: Функции
+      url: /ru/doc/language/functions/

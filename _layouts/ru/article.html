@@ -1,9 +1,49 @@
 ---
-layout: ru/page
+layout: ru/default
 ---
 
-<div class="article-wrapper">
+<article class="article-page">
+  <div class="article-table">
+    <div class="article-table-header">Содержание:</div>
+    <div class="article-table-list">
+      {% for entry in site.data.ru.railLanguageNavigation %}
+        {% capture fullurl %}{{ site.baseurl }}{{ entry.url }}{% endcapture %}
+        {% if fullurl == page.url %}
+          {% assign activeLink = 'active' %}
+        {% else %}
+          {% assign activeLink = null %}
+        {% endif %}
+        <div class="article-table-item">
+          {% if entry.url %}
+            <a class="article-table-link {{activeLink}}" href="{{entry.url}}">{{entry.title}}</a>
+          {% else %}
+            <span class="article-table-label">{{entry.title}}</span>
+          {% endif %}
+          {% if entry.sublinks %}
+            <div class="article-table-list">
+              {% for sublinkEntry in entry.sublinks %}
+                {% capture fullsuburl %}{{ site.baseurl }}{{ sublinkEntry.url }}{% endcapture %}
+                {% if fullsuburl == page.url %}
+                  {% assign activeSublink = 'active' %}
+                {% else %}
+                  {% assign activeSublink = null %}
+                {% endif %}
+                <div class="article-table-item">
+                  <a class="article-table-link {{activeSublink}}" href="{{sublinkEntry.url}}">{{sublinkEntry.title}}</a>
+                </div>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
   <div class="article-content">
+    {% if page.title %}
+    <h1> {{ page.title }}</h1>
+    {% endif %}
+
     {{content}}
   </div>
-</div>
+</article>

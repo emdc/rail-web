@@ -1,0 +1,111 @@
+@import ../data/data
+
+.article-page
+  display: flex
+  flex-direction: row
+
+@media (max-width: 768px)
+  .article-page
+    display: flex
+    flex-direction: column-reverse
+
+.article-table
+  margin-top: 25px
+  padding: 0 10px 10px 10px
+  border-right: 1px solid $colorBorder
+  min-width: 330px
+
+@media (max-width: 768px)
+  .article-table
+    margin-top: 0
+    padding: 20px 0 0 0
+    border-right: 0
+    border-top: 1px solid $colorBorder
+    min-width: auto
+
+.article-table-header
+  font-weight: 800
+  letter-spacing: 1px
+
+.article-table-list
+  display: flex
+  flex-direction: column
+  padding-top: 5px
+  padding-left: 20px
+  font-family: $fontMono
+  &:first-child
+    padding-left: 0
+
+.article-table-item
+  display: inline-block
+
+.article-table-label
+  color: $colorText
+
+  &::before
+    content: '>'
+    opacity: 0.3
+    padding-right: 5px
+
+.article-table-link
+  color: $colorText
+  text-decoration: none
+
+  &::before
+    content: '—'
+    opacity: 0.3
+    padding-right: 5px
+
+  &:hover
+    color: $colorLinkHover
+  &.active
+    color: $colorLinkActive
+    &:hover
+      color: $colorLinkHover
+
+.article-content
+  display: block
+  padding-left: 10px
+  flex-grow: 1
+
+@media (max-width: 768px)
+  .article-content
+    padding-left: 0
+
+@media (min-width: 1200px)
+  .article-content
+    padding-left: 25px
+
+.article-content
+  a
+    color: $colorLink
+
+    &:hover
+      color: $colorLinkHover
+    &:visited
+      color: $colorLink
+
+  em
+    font-weight: 300
+
+  .highlighter-rouge, .highlight, pre, code
+    font-family: $fontMono
+    font-size: $fsDef
+
+  .highlighter-rouge
+    background-color: $colorCode
+
+  code.highlighter-rouge
+    padding-left: 5px
+    padding-right: 5px
+    color: $colorTextCodeSingle
+
+  div.highlighter-rouge
+    padding: 10px
+    margin-left: 35px
+    margin-right: 35px
+    margin-top: 15px
+    color: $colorTextCodeSingle
+
+    pre.highlight
+      margin: 0
