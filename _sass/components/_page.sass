@@ -10,3 +10,67 @@
       color: $colorLinkHover
     &:visited
       color: $colorLink
+
+.page-404
+  margin-left: auto
+  margin-right: auto
+  min-width: 300px
+
+  .header
+    margin-top: 180px
+    display: flex
+    flex-direction: column
+
+  @media (max-width: 768px)
+    .header
+      margin-top: 80px
+      display: flex
+      flex-direction: column
+
+  .title, .label
+    display: flex
+    justify-content: center
+
+  .title
+    font-family: $fontSans
+    font-size: 6em
+    font-weight: 800
+
+  .label
+    padding-top: 60px
+    font-family: $fontMono
+    font-size: 3em
+    line-height: 145%
+
+    &::after
+      content: "_"
+      display: inline-block
+      vertical-align: top
+      width: 20px
+      animation: blink 1s step-end infinite
+
+      @keyframes blink
+        0%
+          opacity: 1.0
+        50%
+          opacity: 0.0
+        100%
+          opacity: 1.0
+
+  .description
+    margin-left: auto
+    margin-right: auto
+    padding-top: 70px
+    max-width: 500px
+    font-family: $fontMono
+    line-height: 145%
+    text-align: justify
+
+    a
+      color: $colorLink
+      text-decoration: underline
+
+      &:hover
+        color: $colorLinkHover
+      &:visited
+        color: $colorLink
