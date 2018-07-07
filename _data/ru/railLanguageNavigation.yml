@@ -6,11 +6,17 @@
     - title: Комментарии
       url: /ru/doc/language/comments/
 
-    - title: Типы и именование
+    - title: Именование
+      url: /ru/doc/language/naming/
+
+    - title: Типы
       url: /ru/doc/language/types/
 
     - title: Переменные и константы
       url: /ru/doc/language/variables/
+
+    - title: Строки
+      url: /ru/doc/language/strings/
 
     - title: Функции
       url: /ru/doc/language/functions/
