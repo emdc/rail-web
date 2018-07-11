@@ -12,11 +12,16 @@
     - title: Типы
       url: /ru/doc/language/types/
 
+    - title: Объединения
+      url: /ru/doc/language/unions/
+
     - title: Переменные и константы
       url: /ru/doc/language/variables/
 
-    - title: Строки
-      url: /ru/doc/language/strings/
-
     - title: Функции
       url: /ru/doc/language/functions/
+
+- title: Типы
+  sublinks:
+    - title: Строки
+      url: /ru/doc/language/strings/
