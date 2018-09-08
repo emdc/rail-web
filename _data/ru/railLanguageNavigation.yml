@@ -3,11 +3,19 @@
 
 - title: Основы
   sublinks:
+    - title: Ключевые слова
+      url: /ru/doc/language/keywords/
+
     - title: Комментарии
       url: /ru/doc/language/comments/
 
     - title: Именование
       url: /ru/doc/language/naming/
+
+- title: Элементы
+  sublinks:
+    - title: Переменные и константы
+      url: /ru/doc/language/variables/
 
     - title: Типы
       url: /ru/doc/language/types/
@@ -15,13 +23,66 @@
     - title: Объединения
       url: /ru/doc/language/unions/
 
-    - title: Переменные и константы
-      url: /ru/doc/language/variables/
+    - title: Перечисления
+      url: /ru/doc/language/enums/
+
+    - title: Псевдонимы
+      url: /ru/doc/language/aliases/
+
+    - title: Массивы
+      url: /ru/doc/language/arrays/
+
+    - title: Кортежи
+      url: /ru/doc/language/tuples/
 
     - title: Функции
       url: /ru/doc/language/functions/
 
+    - title: Операторы
+      url: /ru/doc/language/operators/
+
+    - title: Классы
+      url: /ru/doc/language/classes/
+
+- title: Выражения
+  sublinks:
+    - title: Литералы
+      url: /ru/doc/language/literals/
+
+    - title: Путь
+      url: /ru/doc/language/path/
+
+    - title: Условия
+      url: /ru/doc/language/conditions/
+
+    - title: Сопоставления
+      url: /ru/doc/language/matches/
+
+    - title: Диапазоны
+      url: /ru/doc/language/ranges/
+
+    - title: Циклы
+      url: /ru/doc/language/loops/
+
+    - title: Вызов функций
+      url: /ru/doc/language/functions-calls/
+
+    - title: Вызов методов
+      url: /ru/doc/language/methods-calls/
+
+    - title: Вызов операторов
+      url: /ru/doc/language/operators-calls/
+
 - title: Типы
   sublinks:
-    - title: Строки
-      url: /ru/doc/language/strings/
+    - title: Модель памяти
+      url: /ru/doc/language/memory-model/
+
+    - title: Время жизни
+      url: /ru/doc/language/lifecycle/
+
+    - title: Деструкторы
+      url: /ru/doc/language/destructors/
+
+    - title: Специальные типы
+      url: /ru/doc/language/special-types/
